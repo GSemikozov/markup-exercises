@@ -1,0 +1,6 @@
+.toggle-button {
+  @include reset-btn;
+
+  cursor: pointer;
+  border: none;
+}

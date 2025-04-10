@@ -1,0 +1,8 @@
+{# templates/components/icon.twig #}
+{% set iconName = name|default('contrast') %}
+{% set iconPath = '../../img/icons/' ~ iconName ~ '.svg' %}
+{% set sizeClass = size is defined ? 'icon_' ~ size : '' %}
+
+<span class="icon {{ sizeClass }} {{ class|default('') }}">
+  {% include iconPath %}
+</span>

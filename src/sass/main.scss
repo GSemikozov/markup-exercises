@@ -1,0 +1,75 @@
+/* ==========  Util  ========== */
+@import 'util/_all';
+
+/* ==========  Config  ========== */
+@import 'config/_all';
+
+/* ==========  Third party  ========== */
+@import 'vendor/_all';
+
+/* ==========  Global  ========== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  position: relative;
+  width: 100%;
+  min-width: 320px;
+  font-size: 10px;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100%;
+
+  font-family: var(--font);
+  font-size: 1.6rem;
+  font-weight: var(--font-regular);
+  line-height: 1.5;
+  color: var(--color-text);
+
+  background: var(--color-body);
+}
+
+/* ==========  Custom  ========== */
+.page-content {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+}
+
+@import 'component/typography';
+@import 'component/box';
+@import 'component/button';
+@import 'component/form';
+@import 'component/grid';
+@import 'component/helper';
+@import 'component/badge';
+@import 'component/icon';
+@import 'component/logo';
+@import 'component/toggle-button';
+@import 'component/theme-switcher';
+@import 'component/collapsed';
+@import 'component/loader';
+@import 'component/section';
+@import 'component/header';
+@import 'component/page';
+@import 'component/hero';
+@import 'component/sidebar';
+@import 'component/container';
+@import 'component/page-banner';

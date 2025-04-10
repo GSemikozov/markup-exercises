@@ -1,0 +1,34 @@
+.badge {
+  @include ellipsis;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  max-width: 100%;
+  padding: 0.25em 0.5em;
+  border: var(--border);
+  border-radius: 1em;
+
+  font-size: 0.8rem;
+  font-weight: var(--font-bold);
+  line-height: 1;
+  color: var(--color-heading);
+  text-align: center;
+  vertical-align: middle;
+
+  background: var(--color-body);
+
+  @each $color in $accent-color-list {
+    &_#{$color} {
+      border-color: var(--color-#{$color});
+      color: #fff;
+      background: var(--color-#{$color});
+    }
+  }
+
+  &_lg {
+    padding: 0.5em 0.75em;
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,104 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+
+  font: inherit;
+  font-weight: var(--font-medium);
+  line-height: 1.2;
+  color: var(--color-heading);
+}
+
+h1 {
+  font-size: 3.4rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+}
+
+h5 {
+  font-size: 1.4rem;
+}
+
+h6 {
+  font-size: 1.2rem;
+}
+
+.page-heading {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+  transition: var(--transition);
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--color-link-hover);
+  }
+
+  &[href^='tel:'],
+  &[href^='mailto:'] {
+    text-decoration: underline;
+
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: none;
+    }
+  }
+}
+
+b,
+strong {
+  font-weight: var(--font-bold);
+}
+
+ul,
+ol {
+  margin: 0;
+  padding-left: 1.4em;
+
+  & > li::marker {
+    color: var(--color-text-muted);
+  }
+}
+
+hr {
+  display: block;
+  margin: 1rem 0;
+  border: var(--delimiter);
+}
+
+code,
+kbd,
+pre,
+samp {
+  overflow: auto;
+  color: var(--color-heading);
+}
+
+::placeholder {
+  color: var(--color-text-muted);
+  opacity: 1;
+}

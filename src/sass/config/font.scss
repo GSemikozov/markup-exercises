@@ -1,0 +1,9 @@
+$font-weight-list: (
+  regular: 400,
+  bold: 700,
+);
+
+@each $key, $val in $font-weight-list {
+  @include font('Poppins', normal, $val, '@/font/poppins-#{$val}.ttf');
+  @include font('Poppins', italic, $val, '@/font/poppins-#{$val}-italic.ttf');
+}

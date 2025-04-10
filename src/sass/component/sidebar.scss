@@ -1,0 +1,138 @@
+.sidebar {
+  position: sticky;
+  top: 2rem;
+
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  width: 100%;
+  max-width: 91px;
+  max-height: calc(100vh - 4rem);
+  border-radius: var(--radius-xl);
+
+  background-color: var(--color-box);
+
+  transition: max-width 250ms ease-in-out;
+
+  @include query(lg) {
+    max-width: 270px;
+  }
+
+  &_collapsed {
+    max-width: 91px;
+
+    .sidebar__nav-item-text,
+    .sidebar__section-heading,
+    .logo__text,
+    .sidebar__footer {
+      opacity: 0;
+    }
+  }
+
+  &__header {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 2rem 5.5rem 2rem 2.9rem;
+    border-bottom: 1px solid var(--color-delimiter);
+  }
+
+  &__footer {
+    padding: 2.7rem 2.9rem;
+    border-top: 1px solid var(--color-delimiter);
+  }
+
+  &__footer-content {
+    white-space: nowrap;
+    opacity: 0;
+
+    @include query(lg) {
+      opacity: 1;
+    }
+  }
+
+  &__toggle {
+    position: absolute;
+    top: 50%;
+    left: calc(270px - 5.5rem);
+    transform: translateY(-50%);
+  }
+
+  &__body {
+    padding: 3.4rem 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    padding: 0;
+
+    list-style: none;
+  }
+
+  &__nav-item {
+    display: grid;
+    grid-template-columns: 19px 1fr;
+    gap: 1.8rem;
+    align-items: center;
+
+    padding: 1.4rem 3.4rem;
+
+    font-size: 1.2rem;
+    color: var(--color-text);
+
+    &_active {
+      font-weight: 700;
+      color: var(--navbar-item-active-color);
+      background-color: var(--navbar-item-active-backbround);
+
+      .sidebar__nav-item-icon {
+        color: var(--color-primary);
+      }
+    }
+
+    &_accent {
+      font-weight: 700;
+      color: var(--color-accent);
+    }
+  }
+
+  &__nav-item-text {
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 250ms ease;
+    @include ellipsis;
+
+    @include query(lg) {
+      opacity: 1;
+    }
+  }
+
+  &__nav-item-icon {
+    line-height: 1;
+    color: var(--navbar-item-icon-color);
+  }
+
+  &__section-heading {
+    margin: 1.6rem 0 2.8rem;
+    padding: 0 3.2rem;
+
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    opacity: 0;
+
+    transition: opacity 250ms ease;
+
+    @include query(lg) {
+      opacity: 1;
+    }
+  }
+}

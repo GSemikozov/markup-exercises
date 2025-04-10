@@ -1,0 +1,13 @@
+.logo {
+  cursor: pointer;
+  min-width: 126px;
+
+  &__text {
+    opacity: 0;
+    transition: opacity 250ms ease-in-out;
+
+    @include query(lg) {
+      opacity: 1;
+    }
+  }
+}

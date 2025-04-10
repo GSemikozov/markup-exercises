@@ -1,0 +1,304 @@
+{% set title = 'Components' %}
+{% set active_nav = '/components' %}
+
+{% extends '@template/layout/main.twig' %}
+
+{% block content %}
+<section class="section section_offset border-top">
+  <div class="section__body">
+    <p>This starter is delivering with ready-to-use utils, styled components, helpers and much more. Some majors of these are described in this section.</p>
+  </div>
+</section>
+
+<section class="section section_offset border-top">
+  <h2 class="section__title">
+    Button
+  </h2>
+
+  <div class="section__body">
+    <div class="d-flex flex-wrap gap-1">
+      <button type="button" class="btn">
+        Default
+      </button>
+      <button type="button" class="btn btn_primary">
+        Primary
+      </button>
+      <button type="button" class="btn btn_accent">
+        Accent
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="section section_offset border-top">
+  <h2 class="section__title">
+    Badge
+  </h2>
+
+  <div class="section__body">
+    <div class="d-flex flex-wrap gap-1">
+      <span class="badge">10</span>
+      <span class="badge badge_primary">10</span>
+      <span class="badge badge_accent">10</span>
+    </div>
+    <div class="d-flex flex-wrap gap-1">
+      <span class="badge badge_lg">10</span>
+      <span class="badge badge_primary badge_lg">10</span>
+      <span class="badge badge_accent badge_lg">10</span>
+    </div>
+  </div>
+</section>
+
+<section class="section section_offset border-top">
+  <h2 class="section__title">
+    Collapsed section with animation
+  </h2>
+
+  <div class="section__body">
+    <div class="col-xs-12 col-md-6">
+      <div class="d-flex flex-column">
+        <details class="collapsed js-collapsed" data-collapsed>
+          <summary class="collapsed__summary" aria-expanded="false" aria-controls="collapsed-content">
+            <span class="collapsed__label">Click to expand</span>
+            <span class="collapsed__arrow">
+              {% include '@template/component/icon.twig' with { name: 'angle-right', class: 'sm' } only %}
+            </span>
+          </summary>
+          <div id="collapsed-content" class="collapsed__content" hidden>
+            <p>This is animated content that grows and shrinks based on real height.</p>
+            <p>It works no matter how much content you have.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section_offset border-top">
+  <h2 class="section__title">
+    Loader
+  </h2>
+
+  <div class="section__body">
+    <div class="d-flex align-items-center flex-wrap gap-1">
+      {% include '@template/component/loader.twig' with {size: 'xs'} %}
+      {% include '@template/component/loader.twig' with {size: 'sm'} %}
+      {% include '@template/component/loader.twig' %}
+      {% include '@template/component/loader.twig' with {size: 'lg'} %}
+      {% include '@template/component/loader.twig' with {size: 'xl'} %}
+    </div>
+  </div>
+</section>
+
+<section class="section section_offset border-top">
+  <h2 class="section__title">
+    Grid
+  </h2>
+
+  <div class="section__body">
+    <h4 class="mt-8">
+      Grow and auto width columns controlled with
+      <span class="badge badge_info badge_lg">.fill</span>
+      class
+    </h4>
+
+    <div class="row fill">
+      <div class="col">
+        <div class="border radius p-2 text-center">
+          Grow column
+        </div>
+      </div>
+      <div class="col col-auto">
+        <div class="border radius p-2 text-center">
+          Auto column
+        </div>
+      </div>
+      <div class="col">
+        <div class="border radius p-2 text-center">
+          Grow column
+        </div>
+      </div>
+    </div>
+
+    <h4 class="mt-8">
+      Equal-width columns defined in
+      <span class="badge badge_info badge_lg">.row</span>
+      with
+      <span class="badge badge_info badge_lg">.cols-{breakpoint}-{size}</span>
+      syntax
+    </h4>
+
+    <div class="row cols-xs-2 cols-md-4">
+      <div class="col">
+        <div class="border radius p-2 text-center">
+          1 column
+        </div>
+      </div>
+      <div class="col">
+        <div class="border radius p-2 text-center">
+          2 column
+        </div>
+      </div>
+      <div class="col">
+        <div class="border radius p-2 text-center">
+          3 column
+        </div>
+      </div>
+      <div class="col">
+        <div class="border radius p-2 text-center">
+          4 column
+        </div>
+      </div>
+      <div class="col">
+        <div class="border radius p-2 text-center">
+          5 column
+        </div>
+      </div>
+      <div class="col">
+        <div class="border radius p-2 text-center">
+          6 column
+        </div>
+      </div>
+      <div class="col">
+        <div class="border radius p-2 text-center">
+          7 column
+        </div>
+      </div>
+      <div class="col">
+        <div class="border radius p-2 text-center">
+          8 column
+        </div>
+      </div>
+    </div>
+
+    <h4 class="mt-8">
+      Control column width in each
+      <span class="badge badge_info badge_lg">.col</span>
+      with
+      <span class="badge badge_info badge_lg">.col-{breakpoint}-{size}</span>
+      syntax
+    </h4>
+
+    <div class="row">
+      <div class="col-xs-12 col-md-3">
+        <div class="border radius p-2 text-center">
+          1 column
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-6">
+        <div class="border radius p-2 text-center">
+          2 column
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-3">
+        <div class="border radius p-2 text-center">
+          3 column
+        </div>
+      </div>
+      <div class="col-xs-12">
+        <div class="border radius p-2 text-center">
+          4 column
+        </div>
+      </div>
+    </div>
+
+    <h4 class="mt-8">
+      Offset columns with
+      <span class="badge badge_info badge_lg">.offset-{breakpoint}-{size}</span>
+      syntax
+    </h4>
+
+    <div class="row">
+      <div class="col-xs-12 col-md-3">
+        <div class="border radius p-2 text-center">
+          1 column
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-3 offset-md-3">
+        <div class="border radius p-2 text-center">
+          2 column
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-3 offset-md-3">
+        <div class="border radius p-2 text-center">
+          3 column
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-3 offset-md-3">
+        <div class="border radius p-2 text-center">
+          4 column
+        </div>
+      </div>
+    </div>
+
+    <h4 class="mt-8">
+      Gaps controlled with
+      <span class="badge badge_info badge_lg">.gap-{breakpoint}</span>
+      for XY axes,
+      <span class="badge badge_info badge_lg">.gap-{breakpoint}-x</span>
+      for X axis or
+      <span class="badge badge_info badge_lg">.gap-{breakpoint}-y</span>
+      for Y axis syntax defined in
+      <span class="badge badge_info badge_lg">.row</span>
+      class
+    </h4>
+
+    <div class="row fill gap-xs cols-xs-2 cols-md-4">
+      <div class="col">
+        <div class="border radius p-2 text-center">
+          1 column
+        </div>
+      </div>
+      <div class="col">
+        <div class="border radius p-2 text-center">
+          2 column
+        </div>
+      </div>
+      <div class="col">
+        <div class="border radius p-2 text-center">
+          3 column
+        </div>
+      </div>
+      <div class="col">
+        <div class="border radius p-2 text-center">
+          4 column
+        </div>
+      </div>
+      <div class="col">
+        <div class="border radius p-2 text-center">
+          5 column
+        </div>
+      </div>
+      <div class="col">
+        <div class="border radius p-2 text-center">
+          6 column
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section_offset border-top">
+  <h2 class="section__title">
+    Helper
+  </h2>
+
+  <div class="section__body">
+    <p>
+      There are a bunch of different css helper classes such as
+      <span class="badge badge_info badge_lg">.d-flex</span>,
+      <span class="badge badge_info badge_lg">.mt-4</span>,
+      <span class="badge badge_info badge_lg">.bg-primary</span>,
+      <span class="badge badge_info badge_lg">.color-error</span>
+      etc.
+    </p>
+
+    <p>
+      Full list you can view in
+      <span class="badge badge_info badge_lg">@/src/sass/component/helper.scss</span>
+      file.
+    </p>
+  </div>
+</section>
+
+{% endblock %}

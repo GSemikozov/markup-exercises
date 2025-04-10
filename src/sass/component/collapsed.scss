@@ -1,0 +1,38 @@
+.collapsed {
+  overflow: hidden;
+  display: block;
+  border: none;
+
+  &__summary {
+    cursor: pointer;
+    user-select: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1.6rem 0;
+
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-text);
+    list-style: none;
+
+    &::marker {
+      display: none;
+    }
+  }
+
+  &__content {
+    overflow: hidden;
+    transition: height 300ms ease;
+  }
+
+  &__arrow {
+    transition: transform 300ms ease;
+  }
+
+  &[open] &__arrow {
+    transform: rotate(90deg);
+  }
+}

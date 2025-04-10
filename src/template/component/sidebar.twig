@@ -1,0 +1,55 @@
+<aside class="sidebar" id="sidebar" aria-label="Sidebar navigation">
+  <div class="sidebar__header">
+    {% block logo %}
+    {% include '@template/component/logo.twig' %}
+    {% endblock %}
+    <button class="toggle-button sidebar__toggle" id="toggle-btn">
+      {% block logo %}
+      {% include '@template/component/toggle-icon.twig' %}
+      {% endblock %}
+    </button>
+  </div>
+  <div class="sidebar__body">
+    <nav class="sidebar__nav" aria-label="Main navigation">
+      <ul class="sidebar__list">
+        {% for nav in header %}
+        <li class="sidebar__list-item">
+          <a href="{{ nav.link }}" class="sidebar__nav-item {% if active_nav == nav.link %}sidebar__nav-item_active{% endif %}">
+            <span class="sidebar__nav-item-icon" aria-hidden="true">
+              {% include '@template/component/icon.twig' with { name: nav.icon } only %}
+            </span>
+            <span class="sidebar__nav-item-text">{{ nav.name }}</span>
+          </a>
+        </li>
+        {% endfor %}
+
+        <li class="sidebar__list-item">
+          <h3 class="sidebar__section-heading">Account</h3>
+          <ul class="sidebar__list">
+            <li class="sidebar__list-item">
+              <a href="/settings" class="sidebar__nav-item {% if active_nav == '/settings' %}sidebar__nav-item_active{% endif %}">
+                <span class="sidebar__nav-item-icon" aria-hidden="true">
+                  {% include '@template/component/icon.twig' with { name: 'settings' } only %}
+                </span>
+                <span class="sidebar__nav-item-text">Settings</span>
+              </a>
+            </li>
+            <li class="sidebar__list-item">
+              <a href="/logout" class="sidebar__nav-item sidebar__nav-item_accent {% if active_nav == '/logout' %}sidebar__nav-item_active{% endif %}">
+                <span class="sidebar__nav-item-icon" aria-hidden="true">
+                  {% include '@template/component/icon.twig' with { name: 'logout' } only %}
+                </span>
+                <span class="sidebar__nav-item-text">Logout</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="sidebar__footer">
+    <div class="sidebar__footer-content">
+      To be implemented
+    </div>
+  </div>
+</aside>

@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Overview",
+    "link": "/",
+    "icon": "overview"
+  },
+  {
+    "name": "Components",
+    "link": "/components",
+    "icon": "appointments"
+  },
+  {
+    "name": "Doctors",
+    "link": "/doctors",
+    "icon": "doctors"
+  },
+  {
+    "name": "Patology Results",
+    "link": "/results",
+    "icon": "results"
+  },
+  {
+    "name": "Chats",
+    "link": "/chats",
+    "icon": "chats"
+  }
+]

@@ -1,0 +1,11 @@
+.header {
+  height: 87px;
+  border-radius: var(--radius-xl);
+  background-color: var(--color-box);
+
+  &__inner {
+    display: flex;
+    gap: 1.5em;
+    justify-content: space-between;
+  }
+}

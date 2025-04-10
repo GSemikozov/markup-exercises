@@ -1,0 +1,43 @@
+// Screen reader
+// Usage:
+// @include sr-only;
+@mixin sr-only($focusable: false) {
+  position: absolute;
+
+  overflow: hidden !important;
+
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  border: none !important;
+
+  white-space: nowrap !important;
+
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  clip-path: inset(50%) !important;
+
+  @if $focusable {
+    &:focus,
+    &:active {
+      overflow: visible !important;
+
+      width: auto !important;
+      height: auto !important;
+      margin: auto !important;
+
+      white-space: normal !important;
+
+      clip: auto !important;
+      clip-path: none !important;
+    }
+  }
+}
+
+.sr-only {
+  @include sr-only;
+}
+
+.sr-only-focusable {
+  @include sr-only(true);
+}

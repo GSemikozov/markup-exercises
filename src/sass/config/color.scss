@@ -1,0 +1,42 @@
+$accent-color-list: primary, accent;
+
+$color-list: (
+  body: #fff,
+  box: #f7f7f7,
+
+  heading: #343434,
+  text: #343434,
+  text-inverse: #fff,
+  text-muted: #939ba2,
+
+  delimiter: #d3d3d3,
+
+  link: #100db1,
+  link-hover: #747bff,
+
+  border: #e7e7e7,
+  border-hover: #c4c4c4,
+
+  primary: #100db1,
+  primary-hover: #0c0c35,
+  button-primary-border: #e7e7e7,
+
+  accent: #f80d38,
+  accent-hover: #bb2d3b,
+);
+
+$color-dark-list: (
+  body: #050517,
+  box: #0c0c35,
+
+  heading: #fff,
+  text: #fff,
+  text-inverse: #343434,
+  text-muted: #6c757d,
+
+  border: #3d3d3d,
+  border-hover: #c4c4c4,
+
+  primary-hover: #0c0c35,
+  button-primary-border: #100db1,
+);

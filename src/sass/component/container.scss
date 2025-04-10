@@ -1,0 +1,14 @@
+.container {
+  display: block;
+
+  width: 100%;
+  max-width: 72em;
+  margin: 0 auto;
+  padding: 0 var(--gap);
+}
+
+.container-fluid {
+  display: block;
+  width: 100%;
+  padding: 0 var(--gap);
+}
