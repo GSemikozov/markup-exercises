@@ -8,7 +8,9 @@ This project is a markup exercises playground.
 
 Vite requirements and documentation are available on its [official website](https://vitejs.dev/).
 
-Check out the [components](#components) section for examples and reusable UI elements.
+Published via Netlify: [link](https://markup-exercises.netlify.app/).
+
+Check out the [components](https://markup-exercises.netlify.app/components) section for examples and reusable UI elements.
 
 ---
 
