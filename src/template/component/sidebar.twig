@@ -3,8 +3,8 @@
     {% block logo %}
     {% include '@template/component/logo.twig' %}
     {% endblock %}
-    <button class="toggle-button sidebar__toggle" id="toggle-btn">
-      {% block logo %}
+    <button class="toggle-button sidebar__toggle" id="toggle-btn" aria-label="Toggle sidebar">
+      {% block toggle %}
       {% include '@template/component/toggle-icon.twig' %}
       {% endblock %}
     </button>
