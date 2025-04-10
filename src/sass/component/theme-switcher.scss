@@ -39,11 +39,11 @@
     opacity: 0;
   }
 
-  &__switcher[aria-checked='true'] &__slider {
+  &__switcher[data-checked='true'] &__slider {
     background-color: #f5dee5;
   }
 
-  &__switcher[aria-checked='true'] &__slider::before {
+  &__switcher[data-checked='true'] &__slider::before {
     transform: translateX(18px);
     background: var(--color-accent);
   }

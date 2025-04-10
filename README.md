@@ -91,6 +91,20 @@ See the components section in the app for styled UI elements.
 
 ---
 
+## TODO
+
+We can improve our build adding a few more plugins to:
+
+- extract and inject critical css
+- convert png/jpg to webP if possible
+- check and reduce dead / unused css and js
+
+Also if we gonna use multiple pages on this project then we must ensure smooth transitions when navigating between pages (it is visible on theme changer, it must be improved).
+
+Another point - make js more modular.
+
+---
+
 ## 🔐 License
 
 MIT

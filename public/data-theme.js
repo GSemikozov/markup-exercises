@@ -107,6 +107,6 @@ function updateThemeLabels(currentTheme) {
 
   const switcher = document.querySelector('[data-theme-toggle]');
   if (switcher) {
-    switcher.setAttribute('aria-checked', currentTheme === DATA_THEME.value_dark);
+    switcher.setAttribute('data-checked', currentTheme === DATA_THEME.value_dark);
   }
 }
