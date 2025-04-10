@@ -55,6 +55,15 @@
 
     width: 34px;
     height: 16px;
-    margin: 0 0.8rem 0 1.6rem;
+    margin: 0 0 0 1.6rem;
+  }
+
+  &__text {
+    display: none;
+    margin-left: 0.8rem;
+
+    @include query(md) {
+      display: flex;
+    }
   }
 }
