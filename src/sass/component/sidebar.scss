@@ -1,6 +1,6 @@
 .sidebar {
   position: sticky;
-  top: 2rem;
+  top: 1rem;
 
   overflow: hidden;
   display: grid;
@@ -8,7 +8,7 @@
 
   width: 100%;
   max-width: 91px;
-  max-height: calc(100vh - 4rem);
+  height: min-content;
   border-radius: var(--radius-xl);
 
   background-color: var(--color-box);
@@ -16,7 +16,9 @@
   transition: max-width 250ms ease-in-out;
 
   @include query(lg) {
+    top: 2rem;
     max-width: 270px;
+    max-height: calc(100vh - 4rem);
   }
 
   &_collapsed {
@@ -25,7 +27,7 @@
     .sidebar__nav-item-text,
     .sidebar__section-heading,
     .logo__text,
-    .sidebar__footer {
+    .sidebar__footer-content {
       opacity: 0;
     }
   }
@@ -63,17 +65,25 @@
   }
 
   &__body {
-    padding: 3.4rem 0;
+    padding: 1.4rem 0;
+
+    @include query(lg) {
+      padding: 3.4rem 0;
+    }
   }
 
   &__list {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
 
     padding: 0;
 
     list-style: none;
+
+    @include query(lg) {
+      gap: 2rem;
+    }
   }
 
   &__nav-item {

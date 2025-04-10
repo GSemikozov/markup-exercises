@@ -1,12 +1,21 @@
 .page {
-  display: flex;
+  display: grid;
+  grid-template-columns: min-content 1fr;
   gap: 2rem;
+
   min-height: 100vh;
-  padding: 2rem;
+  padding: 1rem;
+
+  @include query(lg) {
+    display: flex;
+    padding: 2rem;
+  }
 }
 
 .page__content {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
+  @include query(lg) {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
 }
