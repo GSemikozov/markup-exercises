@@ -12,6 +12,27 @@ Published via Netlify: [link](https://markup-exercises.netlify.app/).
 
 Check out the [components](https://markup-exercises.netlify.app/components) section for examples and reusable UI elements.
 
+### How It Was Built
+
+A component approach is used, styles are separated and grouped into several separate groups.
+
+Initially, in the first exercise I used BEM. Later, in the second exercise, helpers and utilities were added as atomic classes (I used a tool for automatic generation of such classes). In the second exercise, I used postCSS - for pre- and post-processing. However, in the third exercise, I proposed a comprehensive solution using Vite.
+
+Twig is used as a template engine. This is a good example of how layout can be embedded into PHP / Ruby / other templates.
+
+### What Is Done
+
+- Animated Sidebar (except footer part)
+- Popover (only one variant and without additional js to detect position of the menu)
+- Theme Toggler
+- Animated Collapsed Section (we can combine it and build controlled Accordions)
+- Badge
+- Button
+- Forms (in progress)
+- Grid System
+- Loader (I know there is no such component in the design)
+- Helpers (util classes)
+
 ---
 
 ## 🚀 How to Use
