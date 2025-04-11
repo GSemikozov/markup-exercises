@@ -51,6 +51,60 @@
 
 <section class="section section_offset border-top">
   <h2 class="section__title">
+    Popover
+  </h2>
+
+  <div class="section__body">
+    <div class="d-flex flex-wrap gap-1">
+      <div class="popover" data-popover>
+        <button class="popover__trigger" data-popover-trigger aria-haspopup="true" aria-expanded="false" aria-controls="popover-menu">
+          <span aria-hidden="true">
+            {% include '@template/component/icon.twig' with { name: 'more' } only %}
+          </span>
+          <span class="sr-only">Open menu</span>
+        </button>
+
+        <div class="popover__menu" data-popover-menu role="menu" aria-hidden="true">
+          <div class="popover__menu-content">
+            <div class="popover__item" tabindex="0" role="menuitem">Chat</div>
+            <div class="popover__item" tabindex="0" role="menuitem">Book</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section_offset border-top">
+  <h2 class="section__title">
+    Toggler
+  </h2>
+
+  <div class="section__body">
+    <div class="d-flex flex-wrap gap-1">
+      <div class="theme-toggle">
+        <span class="theme-toggle__icon">
+          {% include '@template/component/icon.twig' with {
+          name: 'contrast'
+          } only %}
+        </span>
+
+        <label class="theme-toggle__switch" data-theme-toggle>
+          <input type="checkbox" class="theme-toggle__input" aria-label="Toggle theme">
+          <span class="theme-toggle__slider"></span>
+        </label>
+
+        <span class="theme-toggle__text">
+          <span class="theme-toggle__label theme-toggle__label_light">Apply Light Theme</span>
+          <span class="theme-toggle__label theme-toggle__label_dark">Apply Dark Theme</span>
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section_offset border-top">
+  <h2 class="section__title">
     Collapsed section with animation
   </h2>
 

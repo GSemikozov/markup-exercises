@@ -12,7 +12,7 @@
   <div class="sidebar__body">
     <nav class="sidebar__nav" aria-label="Main navigation">
       <ul class="sidebar__list">
-        {% for nav in header %}
+        {% for nav in navbar %}
         <li class="sidebar__list-item">
           <a href="{{ nav.link }}" class="sidebar__nav-item {% if active_nav == nav.link %}sidebar__nav-item_active{% endif %}">
             <span class="sidebar__nav-item-icon" aria-hidden="true">

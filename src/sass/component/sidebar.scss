@@ -18,6 +18,7 @@
   @include query(lg) {
     top: 2rem;
     max-width: 270px;
+    height: auto;
     max-height: calc(100vh - 4rem);
   }
 

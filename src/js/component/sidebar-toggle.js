@@ -1,15 +1,22 @@
-const toggleButton = document.getElementById('toggle-btn');
-const sidebar = document.getElementById('sidebar');
-const logos = document.querySelectorAll('.logo');
+export function initSidebarToggle({
+  toggleButtonId = 'toggle-btn',
+  sidebarId = 'sidebar',
+  logoSelector = '.logo',
+  collapsedClass = 'sidebar_collapsed',
+} = {}) {
+  const toggleButton = document.getElementById(toggleButtonId);
+  const sidebar = document.getElementById(sidebarId);
+  const logos = document.querySelectorAll(logoSelector);
 
-function toggleSidebar() {
-  sidebar.classList.toggle('sidebar_collapsed');
-}
+  if (!sidebar) return;
 
-document.addEventListener('DOMContentLoaded', () => {
+  function toggleSidebar() {
+    sidebar.classList.toggle(collapsedClass);
+  }
+
   toggleButton?.addEventListener('click', toggleSidebar);
 
   logos.forEach((logo) => {
     logo.addEventListener('click', toggleSidebar);
   });
-});
+}

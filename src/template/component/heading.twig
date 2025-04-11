@@ -1,16 +1,20 @@
 <div class="page-banner">
   <h1 class="page-heading">{{ title }}</h1>
-  <div class="theme-switcher">
-    {% include '@template/component/icon.twig' with {
-    name: 'contrast'
-    } only %}
-    <label class="theme-switcher__switcher" data-checked="false" data-theme-toggle>
-      <input type="checkbox" class="theme-switcher__input" aria-label="Toggle theme">
-      <span class="theme-switcher__slider"></span>
+  <div class="theme-toggle">
+    <span class="theme-toggle__icon">
+      {% include '@template/component/icon.twig' with {
+      name: 'contrast'
+      } only %}
+    </span>
+
+    <label class="theme-toggle__switch" data-theme-toggle>
+      <input type="checkbox" class="theme-toggle__input" aria-label="Toggle theme">
+      <span class="theme-toggle__slider"></span>
     </label>
-    <span class="theme-switcher__text">
-      <span class="theme-switcher__label" data-theme-label="dark">Switch to dark theme</span>
-      <span class="theme-switcher__label" data-theme-label="light">Switch to light theme</span>
+
+    <span class="theme-toggle__text">
+      <span class="theme-toggle__label theme-toggle__label_light">Apply Light Theme</span>
+      <span class="theme-toggle__label theme-toggle__label_dark">Apply Dark Theme</span>
     </span>
   </div>
 </div>

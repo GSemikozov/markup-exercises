@@ -18,7 +18,7 @@ const DATA_THEME = {
     }
 
     DATA_THEME.dataSrcDark();
-    updateThemeLabels(theme);
+    updateThemeToggleInputState(theme);
 
     return true;
   },
@@ -87,26 +87,13 @@ document.addEventListener('change', (event) => {
 
 document.addEventListener('DOMContentLoaded', () => {
   const theme = DATA_THEME.getCurrentTheme();
-  updateThemeLabels(theme);
+  updateThemeToggleInputState(theme);
   DATA_THEME.dataSrcDark();
 });
 
-function updateThemeLabels(currentTheme) {
-  const showLight = document.querySelector('[data-theme-label="dark"]');
-  const showDark = document.querySelector('[data-theme-label="light"]');
-
-  if (!showDark || !showLight) return;
-
-  if (currentTheme === DATA_THEME.value_dark) {
-    showDark.classList.add('hidden');
-    showLight.classList.remove('hidden');
-  } else {
-    showDark.classList.remove('hidden');
-    showLight.classList.add('hidden');
-  }
-
-  const switcher = document.querySelector('[data-theme-toggle]');
-  if (switcher) {
-    switcher.setAttribute('data-checked', currentTheme === DATA_THEME.value_dark);
-  }
+function updateThemeToggleInputState(currentTheme) {
+  const switchers = document.querySelectorAll('[data-theme-toggle] input');
+  switchers.forEach(switcher => {
+    switcher.checked = currentTheme === DATA_THEME.value_dark;
+  });
 }
