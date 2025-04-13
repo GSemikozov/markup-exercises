@@ -50,6 +50,7 @@ export function initCollapsibles() {
         content.addEventListener(
           'transitionend',
           () => {
+            details.setAttribute('open', '');
             content.style.height = '';
             summary.setAttribute('aria-expanded', 'true');
           },
